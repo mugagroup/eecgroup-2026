@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EEC Cars — Automóveis Novos & Usados | EEC Corporate</title>
+    <meta name="description"
+        content="Venda de automóveis novos e usados do grupo EEC Corporate. Sedans, SUVs, comerciais, financiamento e test drive." />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <link rel="stylesheet" href="/css/brand.css" />
+</head>
+
+<body data-brand="cars">
+
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="/" class="navbar-logo">
+                <img src="/assets/logos/eec-cars.svg" alt="EEC Cars" style="height:40px;width:auto" />
+
+            </a>
+            <div class="navbar-menu">
+                <a href="/" class="navbar-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        style="margin-right:4px;vertical-align:-2px">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                    </svg>
+                    EEC Corporate
+                </a>
+                <a href="/brands/cars/" class="navbar-link active">Início</a>
+                <a href="#categories" class="navbar-link">Veículos</a>
+                <a href="#products" class="navbar-link">Destaques</a>
+                <a href="#financing" class="navbar-link">Financiamento</a>
+                <a href="#" class="navbar-link">Contacto</a>
+            </div>
+            <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+        <div class="navbar-mobile" id="navMobile">
+            <a href="/" class="navbar-link">← EEC Corporate</a>
+            <a href="/brands/cars/" class="navbar-link active">Início</a>
+            <a href="#categories" class="navbar-link">Veículos</a>
+            <a href="#products" class="navbar-link">Destaques</a>
+            <a href="#financing" class="navbar-link">Financiamento</a>
+            <a href="#" class="navbar-link">Contacto</a>
+        </div>
+    </nav>
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+    <section class="brand-hero">
+        <div class="brand-hero-bg">
+            <img src="/assets/images/heroes/hero-cars.png" alt="EEC Cars - Automóveis"
+                style="width:100%;height:100%;object-fit:cover" />
+        </div>
+        <div class="brand-hero-overlay" style="opacity:0.7"></div>
+        <div class="brand-hero-pattern"></div>
+        <div class="container">
+            <div class="brand-hero-content">
+                <a href="/" class="back-to-corporate">
+                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M13 8H3M7 4L3 8l4 4" />
+                    </svg>
+                    EEC Corporate
+                </a>
+                <div class="brand-hero-tag">Automóveis Novos & Usados</div>
+                <h1>A Sua Próxima<br>Viagem Começa Aqui</h1>
+                <p class="brand-hero-desc">Descubra a nossa selecção de veículos novos e usados certificados.
+                    Financiamento disponível, test drive gratuito.</p>
+                <div class="brand-hero-btns">
+                    <a href="#products" class="btn btn-primary btn-lg">Ver Stock</a>
+                    <a href="#financing" class="btn btn-outline btn-lg">Calcular Financiamento</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="categories">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle" style="color:#E65100">Veículos</div>
+                <h2 class="section-title">Explore por Tipo</h2>
+                <p class="section-description">Encontre o veículo ideal para o seu estilo de vida e necessidades.</p>
+            </div>
+            <div class="category-grid stagger-children" id="category-grid"></div>
+        </div>
+    </section>
+
+    <section class="section section-alt" id="products">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle" style="color:#E65100">Destaques</div>
+                <h2 class="section-title">Veículos em Destaque</h2>
+                <p class="section-description">Os nossos veículos mais procurados e as melhores oportunidades do mês.
+                </p>
+            </div>
+            <div class="products-scroll" id="products-grid"></div>
+            <div class="text-center" style="margin-top:var(--space-3xl)">
+                <a href="#" class="btn btn-outline-dark">Ver Todo o Stock</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCING CALCULATOR -->
+    <section class="section" id="financing">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle" style="color:#E65100">Financiamento</div>
+                <h2 class="section-title">Calcule o Seu Financiamento</h2>
+                <p class="section-description">Simule a sua prestação mensal de forma rápida e fácil.</p>
+            </div>
+            <div class="reveal"
+                style="max-width:600px;margin:0 auto;background:var(--corp-white);padding:var(--space-2xl);border-radius:var(--border-radius-xl);box-shadow:0 8px 30px var(--corp-shadow)">
+                <div style="margin-bottom:var(--space-lg)">
+                    <label
+                        style="display:block;font-family:var(--font-heading);font-weight:600;font-size:0.9rem;margin-bottom:8px;color:var(--corp-text)">Valor
+                        do Veículo (MT)</label>
+                    <input type="number" id="fin-total" value="3000000"
+                        style="width:100%;padding:14px 16px;border:2px solid var(--corp-border);border-radius:var(--border-radius);font-size:1rem;transition:border var(--transition-fast)"
+                        onfocus="this.style.borderColor='#E65100'"
+                        onblur="this.style.borderColor='var(--corp-border)'" />
+                </div>
+                <div style="margin-bottom:var(--space-lg)">
+                    <label
+                        style="display:block;font-family:var(--font-heading);font-weight:600;font-size:0.9rem;margin-bottom:8px;color:var(--corp-text)">Entrada
+                        (MT)</label>
+                    <input type="number" id="fin-entry" value="500000"
+                        style="width:100%;padding:14px 16px;border:2px solid var(--corp-border);border-radius:var(--border-radius);font-size:1rem;transition:border var(--transition-fast)"
+                        onfocus="this.style.borderColor='#E65100'"
+                        onblur="this.style.borderColor='var(--corp-border)'" />
+                </div>
+                <div style="margin-bottom:var(--space-xl)">
+                    <label
+                        style="display:block;font-family:var(--font-heading);font-weight:600;font-size:0.9rem;margin-bottom:8px;color:var(--corp-text)">Prazo
+                        (meses)</label>
+                    <select id="fin-months"
+                        style="width:100%;padding:14px 16px;border:2px solid var(--corp-border);border-radius:var(--border-radius);font-size:1rem;background:white;cursor:pointer">
+                        <option value="12">12 meses</option>
+                        <option value="24">24 meses</option>
+                        <option value="36" selected>36 meses</option>
+                        <option value="48">48 meses</option>
+                        <option value="60">60 meses</option>
+                    </select>
+                </div>
+                <button onclick="calcFinancing()" class="btn btn-primary"
+                    style="width:100%;background:#E65100;padding:16px">Calcular Prestação</button>
+                <div id="fin-result" style="margin-top:var(--space-xl);text-align:center;display:none">
+                    <p style="font-size:0.9rem;color:var(--corp-text-secondary);margin-bottom:8px">Prestação Mensal
+                        Estimada</p>
+                    <div id="fin-monthly"
+                        style="font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:#E65100"></div>
+                    <p style="font-size:0.8rem;color:var(--corp-text-light);margin-top:8px">*Taxa de juro ilustrativa de
+                        15% ao ano. Condições sujeitas a aprovação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TEST DRIVE -->
+    <section class="section">
+        <div class="container">
+            <div class="promo-banner reveal">
+                <div class="promo-banner-content">
+                    <div class="section-subtitle" style="color:rgba(255,255,255,0.7)">Test Drive</div>
+                    <h2>Agende o Seu Test Drive Gratuito</h2>
+                    <p>Venha experimentar os nossos veículos sem qualquer compromisso. Marque já o seu test drive!</p>
+                    <a href="#" class="btn">Agendar Test Drive</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle" style="color:#E65100">Vantagens</div>
+                <h2 class="section-title">Porquê a EEC Cars</h2>
+            </div>
+            <div class="brand-features stagger-children">
+                <div class="brand-feature-item">
+                    <div class="brand-feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <path d="m9 12 2 2 4-4" />
+                        </svg></div>
+                    <h4>Garantia Completa</h4>
+                    <p>Garantia mecânica em todos os veículos.</p>
+                </div>
+                <div class="brand-feature-item">
+                    <div class="brand-feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="5" width="20" height="14" rx="2" />
+                            <line x1="2" y1="10" x2="22" y2="10" />
+                        </svg></div>
+                    <h4>Financiamento Fácil</h4>
+                    <p>Condições flexíveis adaptadas ao seu orçamento.</p>
+                </div>
+                <div class="brand-feature-item">
+                    <div class="brand-feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg></div>
+                    <h4>Test Drive Gratuito</h4>
+                    <p>Experimente antes de decidir, sem compromisso.</p>
+                </div>
+                <div class="brand-feature-item">
+                    <div class="brand-feature-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
+                        </svg></div>
+                    <h4>Documentação Inclusa</h4>
+                    <p>Toda a documentação e transferência incluída.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle" style="color:#E65100">Depoimentos</div>
+                <h2 class="section-title">O Que Dizem os Nossos Clientes</h2>
+            </div>
+            <div class="testimonials-grid stagger-children" id="testimonials-grid"></div>
+        </div>
+    </section>
+
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <div class="section-subtitle" style="color:rgba(255,255,255,0.6)">Newsletter</div>
+                <h2>Receba as Melhores Ofertas</h2>
+                <p>Subscreva para receber alertas de novos veículos e promoções exclusivas.</p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Insira o seu e-mail" required />
+                    <button type="submit" class="btn btn-primary"
+                        style="background:white;color:#E65100">Subscrever</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/assets/logos/eec-cars.svg" alt="EEC Cars" style="height:50px;width:auto" />
+                    <p>A sua concessionária de confiança em Moçambique. Veículos novos e usados certificados com
+                        garantia e financiamento.</p>
+                    <div class="footer-social">
+                        <a href="#"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                            </svg></a>
+                        <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div>
+                    <h4>Veículos</h4>
+                    <div class="footer-links"><a href="#">Sedans</a><a href="#">SUVs</a><a href="#">Comerciais</a><a
+                            href="#">Usados</a></div>
+                </div>
+                <div>
+                    <h4>Serviços</h4>
+                    <div class="footer-links"><a href="#">Financiamento</a><a href="#">Test Drive</a><a
+                            href="#">Seguro</a><a href="#">Manutenção</a></div>
+                </div>
+                <div>
+                    <h4>Grupo EEC</h4>
+                    <div class="footer-links"><a href="/">EEC Corporate</a><a href="/brands/tech/">EEC Tech</a><a
+                            href="/brands/oclock/">EEC O'Clock</a><a href="/brands/safety/">EEC Safety</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2024 EEC Cars — Grupo EEC Corporate</span>
+                <div class="footer-bottom-links"><a href="#">Privacidade</a><a href="#">Termos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/258840000000" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                fill="white" />
+        </svg>
+    </a>
+
+    <script src="/js/main.js"></script>
+    <script src="/js/brand-data.js"></script>
+    <script src="/js/brand-page.js"></script>
+    <script>
+        function calcFinancing() {
+            const total = parseFloat(document.getElementById('fin-total').value) || 0;
+            const entry = parseFloat(document.getElementById('fin-entry').value) || 0;
+            const months = parseInt(document.getElementById('fin-months').value) || 36;
+            const rate = 0.15 / 12;
+            const principal = total - entry;
+            if (principal <= 0) return;
+            const monthly = (principal * rate * Math.pow(1 + rate, months)) / (Math.pow(1 + rate, months) - 1);
+            document.getElementById('fin-monthly').textContent = Math.round(monthly).toLocaleString('pt-MZ') + ' MT/mês';
+            document.getElementById('fin-result').style.display = 'block';
+        }
+    </script>
+</body>
+
+</html>

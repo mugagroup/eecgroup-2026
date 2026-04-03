@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre o Grupo — EEC Corporate</title>
+    <meta name="description"
+        content="Conheça a história, missão e visão do grupo EEC Corporate. Líder em 7 segmentos de mercado em Moçambique." />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <style>
+        .page-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, var(--corp-primary), var(--corp-secondary));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--text-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--corp-border);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 4px;
+            width: 14px;
+            height: 14px;
+            border-radius: 50%;
+            background: var(--corp-cta);
+            border: 3px solid white;
+            box-shadow: 0 0 0 2px var(--corp-cta);
+        }
+
+        .timeline-year {
+            font-family: var(--font-heading);
+            font-weight: 700;
+            color: var(--corp-cta);
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .timeline-text {
+            color: var(--corp-text-secondary);
+            line-height: 1.7;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-xl);
+        }
+
+        .value-card {
+            padding: var(--space-2xl);
+            border-radius: var(--border-radius-lg);
+            background: white;
+            box-shadow: 0 4px 20px var(--corp-shadow);
+            text-align: center;
+            transition: all var(--transition-base);
+        }
+
+        .value-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px var(--corp-shadow-md);
+        }
+
+        .value-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto var(--space-lg);
+            background: linear-gradient(135deg, var(--corp-accent), var(--corp-cta));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @media (max-width:768px) {
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container"><a href="/" class="navbar-logo">
+                <img src="/assets/logos/eec-icon.svg" alt="EEC Corporate" style="height:40px;width:auto" />
+
+            </a>
+            <div class="navbar-menu"><a href="/" class="navbar-link">Início</a><a href="/about.html"
+                    class="navbar-link active">Sobre</a><a href="/news.html" class="navbar-link">Notícias</a><a
+                    href="/contact.html" class="navbar-link">Contacto</a></div>
+            <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+        <div class="navbar-mobile" id="navMobile"><a href="/" class="navbar-link">Início</a><a href="/about.html"
+                class="navbar-link active">Sobre</a><a href="/news.html" class="navbar-link">Notícias</a><a
+                href="/contact.html" class="navbar-link">Contacto</a></div>
+    </nav>
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-subtitle" style="color:var(--corp-cta)">Quem Somos</div>
+            <h1>Sobre o Grupo EEC Corporate</h1>
+            <p>Uma história de excelência, inovação e compromisso com a qualidade no mercado moçambicano.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="reveal-left">
+                    <div class="section-subtitle">A Nossa Missão</div>
+                    <h2 class="section-title">Transformar a Experiência de Compra em Moçambique</h2>
+                    <p style="color:var(--corp-text-secondary);line-height:1.8;margin-bottom:var(--space-lg)">O grupo
+                        EEC Corporate nasceu com a visão de trazer ao mercado moçambicano produtos de classe mundial,
+                        organizados em marcas distintas que servem diferentes segmentos com excelência e dedicação.</p>
+                    <p style="color:var(--corp-text-secondary);line-height:1.8;margin-bottom:var(--space-lg)">
+                        Acreditamos que cada moçambicano merece acesso a produtos de qualidade premium, com um serviço
+                        de atendimento que reflicta os padrões internacionais mais elevados.</p>
+                    <p style="color:var(--corp-text-secondary);line-height:1.8">A nossa missão é clara: ser o grupo
+                        empresarial de referência em Moçambique, liderando em cada segmento em que operamos através da
+                        inovação, qualidade e compromisso com o cliente.</p>
+                </div>
+                <div class="reveal-right">
+                    <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="7" data-suffix="+">0</div>
+                            <div class="stat-label">Marcas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="10" data-suffix="+">0</div>
+                            <div class="stat-label">Anos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5000" data-suffix="+">0</div>
+                            <div class="stat-label">Produtos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="150" data-suffix="+">0</div>
+                            <div class="stat-label">Colaboradores</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle">Valores</div>
+                <h2 class="section-title">Os Nossos Valores</h2>
+            </div>
+            <div class="values-grid stagger-children">
+                <div class="value-card">
+                    <div class="value-icon">🎯</div>
+                    <h3 style="margin-bottom:var(--space-sm)">Excelência</h3>
+                    <p style="color:var(--corp-text-secondary)">Buscamos a excelência em cada detalhe, desde a selecção
+                        de produtos até ao serviço pós-venda.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">💡</div>
+                    <h3 style="margin-bottom:var(--space-sm)">Inovação</h3>
+                    <p style="color:var(--corp-text-secondary)">Estamos sempre à frente, trazendo as últimas tendências
+                        e tecnologias ao mercado moçambicano.</p>
+                </div>
+                <div class="value-card">
+                    <div class="value-icon">🤝</div>
+                    <h3 style="margin-bottom:var(--space-sm)">Confiança</h3>
+                    <p style="color:var(--corp-text-secondary)">Construímos relações de confiança com clientes,
+                        parceiros e colaboradores através da transparência.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-subtitle">Timeline</div>
+                <h2 class="section-title">A Nossa História</h2>
+            </div>
+            <div style="max-width:700px;margin:0 auto">
+                <div class="timeline reveal">
+                    <div class="timeline-item">
+                        <div class="timeline-year">2014</div>
+                        <div class="timeline-text">Fundação do grupo EEC Corporate em Maputo, Moçambique</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-text">Lançamento da EEC Tech — a primeira marca do grupo</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2017</div>
+                        <div class="timeline-text">Abertura da EEC Cars e EEC O'Clock</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2019</div>
+                        <div class="timeline-text">Expansão com EEC Safety & Equipment e EEC Privé</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2021</div>
+                        <div class="timeline-text">Lançamento da EEC Furniture e EEC Cosmetics</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-text">Lançamento da plataforma digital unificada para todas as marcas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <div class="section-subtitle" style="color:rgba(33,150,243,0.9)">Junte-se a Nós</div>
+                <h2>Faça Parte da Nossa História</h2>
+                <p>Subscreva a newsletter e mantenha-se informado sobre todas as novidades do grupo.</p>
+                <form class="newsletter-form"><input type="email" class="newsletter-input"
+                        placeholder="Insira o seu e-mail" required /><button type="submit"
+                        class="btn btn-primary">Subscrever</button></form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/assets/logos/eec-logo.svg" alt="EEC Corporate" style="height:50px;width:auto" />
+                    <p>Grupo empresarial moçambicano de referência em 7 sectores de mercado.</p>
+                    <div class="footer-social"><a href="#"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                            </svg></a><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" />
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                            </svg></a><a href="#"><svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+                            </svg></a></div>
+                </div>
+                <div>
+                    <h4>Marcas</h4>
+                    <div class="footer-links"><a href="/brands/tech/">EEC Tech</a><a href="/brands/cars/">EEC Cars</a><a
+                            href="/brands/oclock/">EEC O'Clock</a><a href="/brands/safety/">EEC Safety</a><a
+                            href="/brands/prive/">EEC Privé</a><a href="/brands/furniture/">EEC Furniture</a><a
+                            href="/brands/cosmetics/">EEC Cosmetics</a></div>
+                </div>
+                <div>
+                    <h4>Grupo</h4>
+                    <div class="footer-links"><a href="/about.html">Sobre Nós</a><a href="/news.html">Notícias</a><a
+                            href="/contact.html">Contacto</a></div>
+                </div>
+                <div>
+                    <h4>Suporte</h4>
+                    <div class="footer-links"><a href="#">FAQ</a><a href="#">Devoluções</a><a href="#">Envio</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>&copy; 2024 EEC Corporate. Todos os direitos reservados.</span>
+                <div class="footer-bottom-links"><a href="#">Privacidade</a><a href="#">Termos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/258840000000" target="_blank" class="whatsapp-float"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                fill="white" />
+        </svg></a>
+
+    <script src="/js/main.js"></script>
+</body>
+
+</html>

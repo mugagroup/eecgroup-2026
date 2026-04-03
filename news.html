@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notícias — EEC Corporate</title>
+    <meta name="description"
+        content="Últimas notícias, lançamentos e eventos do grupo EEC Corporate e das suas marcas." />
+    <link rel="stylesheet" href="/css/global.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <style>
+        .page-hero {
+            padding: 160px 0 80px;
+            background: linear-gradient(135deg, var(--corp-primary), var(--corp-secondary));
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+
+        .page-hero p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: var(--text-lg);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .featured-news {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            margin-bottom: var(--space-3xl);
+        }
+
+        .featured-card {
+            position: relative;
+            border-radius: var(--border-radius-xl);
+            overflow: hidden;
+            min-height: 400px;
+            display: flex;
+            align-items: flex-end;
+            cursor: pointer;
+            transition: all var(--transition-base);
+        }
+
+        .featured-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px var(--corp-shadow-md);
+        }
+
+        .featured-card-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .featured-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+            z-index: 1;
+        }
+
+        .featured-card-content {
+            position: relative;
+            z-index: 2;
+            padding: var(--space-2xl);
+        }
+
+        .featured-card-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--corp-cta);
+            color: white;
+            border-radius: var(--border-radius);
+            font-family: var(--font-heading);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-md);
+        }
+
+        .featured-card h2 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .featured-card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+
+        .news-filters {
+            display: flex;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-2xl);
+            flex-wrap: wrap;
+        }
+
+        .news-filter-btn {
+            padding: 8px 20px;
+            border: 2px solid var(--corp-border);
+            border-radius: var(--border-radius-full);
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            color: var(--corp-text-secondary);
+        }
+
+        .news-filter-btn:hover,
+        .news-filter-btn.active {
+            border-color: var(--corp-cta);
+            color: var(--corp-cta);
+            background: rgba(233, 69, 96, 0.05);
+        }
+
+        @media (max-width:768px) {
+            .featured-news {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="container"><a href="/" class="navbar-logo">
+                <img src="/assets/logos/eec-icon.svg" alt="EEC Corporate" style="height:40px;width:auto" />
+
+            </a>
+            <div class="navbar-menu"><a href="/" class="navbar-link">Início</a><a href="/about.html"
+                    class="navbar-link">Sobre</a><a href="/news.html" class="navbar-link active">Notícias</a><a
+                    href="/contact.html" class="navbar-link">Contacto</a></div>
+            <div class="navbar-toggle" id="navToggle"><span></span><span></span><span></span></div>
+        </div>
+        <div class="navbar-mobile" id="navMobile"><a href="/" class="navbar-link">Início</a><a href="/about.html"
+                class="navbar-link">Sobre</a><a href="/news.html" class="navbar-link active">Notícias</a><a
+                href="/contact.html" class="navbar-link">Contacto</a></div>
+    </nav>
+    <div class="navbar-overlay" id="navOverlay"></div>
+
+    <section class="page-hero">
+        <div class="container">
+            <div class="section-subtitle" style="color:var(--corp-cta)">Blog</div>
+            <h1>Notícias & Novidades</h1>
+            <p>Fique por dentro dos últimos lançamentos, eventos e novidades de todas as marcas do grupo EEC.</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <!-- Featured News -->
+            <div class="featured-news reveal">
+                <div class="featured-card">
+                    <div class="featured-card-bg" style="background:linear-gradient(135deg,#1565C0,#0D47A1)"></div>
+                    <div class="featured-card-content">
+                        <span class="featured-card-tag">EEC Tech</span>
+                        <h2>Samsung Galaxy S24 — Já Disponível</h2>
+                        <p>A nova geração de smartphones Samsung chegou à EEC Tech com ofertas exclusivas de lançamento.
+                        </p>
+                    </div>
+                </div>
+                <div class="featured-card">
+                    <div class="featured-card-bg" style="background:linear-gradient(135deg,#E65100,#BF360C)"></div>
+                    <div class="featured-card-content">
+                        <span class="featured-card-tag">EEC Cars</span>
+                        <h2>Feira do Automóvel 2024</h2>
+                        <p>As melhores condições de financiamento do ano no nosso evento anual. Visite-nos em Março!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filters -->
+            <div class="news-filters">
+                <button class="news-filter-btn active">Todas</button>
+                <button class="news-filter-btn">EEC Tech</button>
+                <button class="news-filter-btn">EEC Cars</button>
+                <button class="news-filter-btn">EEC O'Clock</button>
+                <button class="news-filter-btn">EEC Safety</button>
+                <button class="news-filter-btn">EEC Privé</button>
+                <button class="news-filter-btn">EEC Furniture</button>
+                <button class="news-filter-btn">EEC Cosmetics</button>
+            </div>
+
+            <!-- News Grid -->
+            <div class="news-grid stagger-children">
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1565C0,#0D47A1)"></div>
+                        <div class="news-card-date">28 Fev 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC Tech</div>
+                        <h3>Novos smartphones Samsung Galaxy S24 já disponíveis</h3>
+                        <p>A EEC Tech recebeu o mais recente lançamento da Samsung. Descubra as novidades e ofertas
+                            especiais.</p><a href="#" class="news-card-link">Ler Mais <svg width="14" height="14"
+                                viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#212121,#FFD700)"></div>
+                        <div class="news-card-date">15 Fev 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC O'Clock</div>
+                        <h3>Colecção Primavera 2024: Elegância Atemporal</h3>
+                        <p>Apresentamos a nova colecção de relógios que combina tradição com modernidade.</p><a href="#"
+                            class="news-card-link">Ler Mais <svg width="14" height="14" viewBox="0 0 16 16" fill="none"
+                                stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#E65100,#BF360C)"></div>
+                        <div class="news-card-date">10 Fev 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC Cars</div>
+                        <h3>Feira do Automóvel EEC: Condições especiais em Março</h3>
+                        <p>Financiamento a partir de 0% de entrada e test drives disponíveis durante todo o mês.</p><a
+                            href="#" class="news-card-link">Ler Mais <svg width="14" height="14" viewBox="0 0 16 16"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1A1A1A,#C9A84C)"></div>
+                        <div class="news-card-date">5 Fev 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC Privé</div>
+                        <h3>Nova colecção de óculos Ray-Ban Primavera</h3>
+                        <p>Os modelos mais icónicos da Ray-Ban já disponíveis na EEC Privé com novos estilos da estação.
+                        </p><a href="#" class="news-card-link">Ler Mais <svg width="14" height="14" viewBox="0 0 16 16"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#4A148C,#7B1FA2)"></div>
+                        <div class="news-card-date">1 Fev 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC Furniture</div>
+                        <h3>Guia: Como criar o escritório perfeito em 2024</h3>
+                        <p>Dicas de ergonomia, design e produtividade para transformar o seu espaço de trabalho.</p><a
+                            href="#" class="news-card-link">Ler Mais <svg width="14" height="14" viewBox="0 0 16 16"
+                                fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <div class="news-card-image">
+                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1A1A1A,#D4A017)"></div>
+                        <div class="news-card-date">28 Jan 2024</div>
+                    </div>
+                    <div class="news-card-body">
+                        <div class="news-card-tag">EEC Cosmetics</div>
+                        <h3>Lançamento: Tom Ford Black Orchid já disponível</h3>
+                        <p>O icónico perfume de Tom Ford chegou à EEC Cosmetics. Descubra esta fragrância intensamente
+                            sofisticada.</p><a href="#" class="news-card-link">Ler Mais <svg width="14" height="14"
+                                viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 8h10M9 4l4 4-4 4" />
+                            </svg></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="section newsletter">
+        <div class="container">
+            <div class="newsletter-content reveal">
+                <div class="section-subtitle" style="color:rgba(33,150,243,0.9)">Newsletter</div>
+                <h2>Nunca Perca Uma Novidade</h2>
+                <p>Subscreva e receba as notícias de todas as marcas directamente no seu e-mail.</p>
+                <form class="newsletter-form"><input type="email" class="newsletter-input"
+                        placeholder="Insira o seu e-mail" required /><button type="submit"
+                        class="btn btn-primary">Subscrever</button></form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="/assets/logos/eec-logo.svg" alt="EEC Corporate" style="height:50px;width:auto" />
+                    <p>Grupo empresarial moçambicano de referência em 7 segmentos de mercado.</p>
+                </div>
+                <div>
+                    <h4>Marcas</h4>
+                    <div class="footer-links"><a href="/brands/tech/">EEC Tech</a><a href="/brands/cars/">EEC Cars</a><a
+                            href="/brands/oclock/">EEC O'Clock</a><a href="/brands/safety/">EEC Safety</a></div>
+                </div>
+                <div>
+                    <h4>Grupo</h4>
+                    <div class="footer-links"><a href="/about.html">Sobre Nós</a><a href="/news.html">Notícias</a><a
+                            href="/contact.html">Contacto</a></div>
+                </div>
+                <div>
+                    <h4>Suporte</h4>
+                    <div class="footer-links"><a href="#">FAQ</a><a href="#">Devoluções</a></div>
+                </div>
+            </div>
+            <div class="footer-bottom"><span>&copy; 2024 EEC Corporate. Todos os direitos reservados.</span>
+                <div class="footer-bottom-links"><a href="#">Privacidade</a><a href="#">Termos</a></div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/258840000000" target="_blank" class="whatsapp-float"><svg viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"
+                fill="white" />
+        </svg></a>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // Filter buttons interaction
+        document.querySelectorAll('.news-filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.news-filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

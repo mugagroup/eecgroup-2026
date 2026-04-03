@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4A148C"/>
+      <stop offset="50%" stop-color="#7B1FA2"/>
+      <stop offset="100%" stop-color="#9C27B0"/>
+    </linearGradient>
+    <linearGradient id="purpleShine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7B1FA2"/>
+      <stop offset="40%" stop-color="#CE93D8"/>
+      <stop offset="60%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#7B1FA2"/>
+    </linearGradient>
+  </defs>
+  <!-- EEC lettering -->
+  <text x="200" y="95" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="90" fill="url(#purpleGrad)" letter-spacing="-2">eec</text>
+  <!-- Shine overlay on letters -->
+  <text x="200" y="95" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="90" fill="url(#purpleShine)" opacity="0.3" letter-spacing="-2">eec</text>
+  <!-- Small chevron above -->
+  <path d="M200 5 L215 20 L210 25 L200 16 L190 25 L185 20 Z" fill="#4A148C" opacity="0.6"/>
+  <!-- Subtitle -->
+  <text x="200" y="135" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="16" fill="#2D0054" letter-spacing="3" text-transform="uppercase">MOBILIÁRIO DE ESCRITÓRIO</text>
+  <text x="200" y="160" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="500" font-size="13" fill="#4A148C" letter-spacing="2">&amp; DIVERSOS</text>
+</svg>

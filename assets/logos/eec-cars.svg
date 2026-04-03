@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 200" width="400" height="200">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E65100"/>
+      <stop offset="50%" stop-color="#F57C00"/>
+      <stop offset="100%" stop-color="#FFB300"/>
+    </linearGradient>
+  </defs>
+  <!-- Background pattern hint -->
+  <rect width="400" height="200" fill="none"/>
+  <!-- EEC lettering -->
+  <text x="200" y="100" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-weight="900" font-size="90" fill="url(#orangeGrad)" letter-spacing="-2">eec</text>
+  <!-- Wheel icon in the C -->
+  <circle cx="315" cy="72" r="16" fill="none" stroke="#FFB300" stroke-width="2.5"/>
+  <circle cx="315" cy="72" r="4" fill="#FFB300"/>
+  <line x1="315" y1="56" x2="315" y2="60" stroke="#FFB300" stroke-width="2"/>
+  <line x1="315" y1="84" x2="315" y2="88" stroke="#FFB300" stroke-width="2"/>
+  <line x1="299" y1="72" x2="303" y2="72" stroke="#FFB300" stroke-width="2"/>
+  <line x1="327" y1="72" x2="331" y2="72" stroke="#FFB300" stroke-width="2"/>
+  <line x1="303.7" y1="60.7" x2="306.5" y2="63.5" stroke="#FFB300" stroke-width="2"/>
+  <line x1="323.5" y1="80.5" x2="326.3" y2="83.3" stroke="#FFB300" stroke-width="2"/>
+  <line x1="303.7" y1="83.3" x2="306.5" y2="80.5" stroke="#FFB300" stroke-width="2"/>
+  <line x1="323.5" y1="63.5" x2="326.3" y2="60.7" stroke="#FFB300" stroke-width="2"/>
+  <!-- Subtitle -->
+  <text x="200" y="140" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="22" fill="#E65100" letter-spacing="6">EEC CARS</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Chevron / Arrow -->
+  <path d="M100 10 L150 58 L138 70 L100 34 L62 70 L50 58 Z" fill="#1C2B3A"/>
+  <!-- Circle e -->
+  <circle cx="100" cy="130" r="52" fill="none" stroke="#2196F3" stroke-width="16" stroke-dasharray="275 345" stroke-dashoffset="-20" stroke-linecap="round"/>
+  <!-- Dot on the e -->
+  <circle cx="143" cy="105" r="9" fill="#2196F3"/>
+</svg>

@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EEC Corporate — Excelência em Cada Segmento</title>
+  <meta name="description"
+    content="EEC Corporate é um grupo empresarial moçambicano líder em tecnologia, automóveis, relógios de luxo, segurança industrial, moda premium, mobiliário e cosméticos." />
+  <meta name="keywords"
+    content="EEC Corporate, Moçambique, tecnologia, automóveis, relógios, segurança, luxo, mobiliário, cosméticos" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="EEC Corporate — Excelência em Cada Segmento" />
+  <meta property="og:description" content="Grupo empresarial moçambicano líder em 7 segmentos de mercado." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/favicon.svg" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/global.css" />
+  <link rel="stylesheet" href="/css/components.css" />
+
+  <style>
+    /* Hero background pattern */
+    .hero-pattern {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(21, 101, 192, 0.4) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(33, 150, 243, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 60% 80%, rgba(21, 101, 192, 0.2) 0%, transparent 50%);
+    }
+
+    .hero-glow {
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.15;
+      z-index: 1;
+    }
+
+    .hero-glow-1 {
+      top: -200px;
+      right: -100px;
+      background: var(--corp-cta);
+    }
+
+    .hero-glow-2 {
+      bottom: -200px;
+      left: -100px;
+      background: var(--corp-accent);
+    }
+
+    /* About image placeholder */
+    .about-image-wrapper {
+      position: relative;
+      border-radius: var(--border-radius-xl);
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: linear-gradient(135deg, var(--corp-secondary), var(--corp-primary));
+    }
+
+    .about-image-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .about-image-accent {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      width: 200px;
+      height: 200px;
+      border: 4px solid var(--corp-cta);
+      border-radius: var(--border-radius-xl);
+      opacity: 0.3;
+    }
+
+    /* Section headers centering */
+    .section-header {
+      text-align: center;
+      margin-bottom: var(--space-3xl);
+    }
+
+    .section-header .section-description {
+      margin: 0 auto;
+    }
+
+    /* Partner grid styling */
+    .partner-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 30px;
+      opacity: 0.35;
+      filter: grayscale(1);
+      transition: all var(--transition-base);
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--corp-text-secondary);
+      letter-spacing: 0.05em;
+    }
+
+    .partner-item:hover {
+      opacity: 1;
+      filter: grayscale(0);
+      color: var(--corp-text);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ============================================ -->
+  <!-- NAVBAR                                       -->
+  <!-- ============================================ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="/" class="navbar-logo">
+        <img src="/assets/logos/eec-icon.svg" alt="EEC Corporate" style="height:40px;width:auto" />
+
+      </a>
+
+      <div class="navbar-menu">
+        <a href="/" class="navbar-link active">Início</a>
+        <a href="/about.html" class="navbar-link">Sobre o Grupo</a>
+
+        <div class="navbar-dropdown">
+          <div class="navbar-link navbar-dropdown-toggle">
+            As Nossas Marcas
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 4L6 8L10 4" />
+            </svg>
+          </div>
+          <div class="navbar-dropdown-menu">
+            <a href="/brands/tech/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#1565C0"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Tech</div>
+                <div class="navbar-dropdown-item-desc">Electrónicos & Tecnologia</div>
+              </div>
+            </a>
+            <a href="/brands/cars/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#E65100"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Cars</div>
+                <div class="navbar-dropdown-item-desc">Automóveis</div>
+              </div>
+            </a>
+            <a href="/brands/oclock/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#FFD700"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC O'Clock</div>
+                <div class="navbar-dropdown-item-desc">Relógios de Luxo</div>
+              </div>
+            </a>
+            <a href="/brands/safety/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#FF6B35"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Safety & Equipment</div>
+                <div class="navbar-dropdown-item-desc">Equipamento de Protecção</div>
+              </div>
+            </a>
+            <a href="/brands/prive/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#C9A84C"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Privé</div>
+                <div class="navbar-dropdown-item-desc">Artigos de Luxo</div>
+              </div>
+            </a>
+            <a href="/brands/furniture/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#7B1FA2"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Furniture</div>
+                <div class="navbar-dropdown-item-desc">Mobiliário</div>
+              </div>
+            </a>
+            <a href="/brands/cosmetics/" class="navbar-dropdown-item">
+              <div class="navbar-dropdown-dot" style="background:#D4A017"></div>
+              <div>
+                <div class="navbar-dropdown-item-text">EEC Cosmetics</div>
+                <div class="navbar-dropdown-item-desc">Perfumaria & Beleza</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <a href="/news.html" class="navbar-link">Notícias</a>
+        <a href="/contact.html" class="navbar-link">Contacto</a>
+      </div>
+
+      <!-- Mobile Toggle -->
+      <div class="navbar-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile" id="navMobile">
+      <a href="/" class="navbar-link active">Início</a>
+      <a href="/about.html" class="navbar-link">Sobre o Grupo</a>
+      <div class="navbar-link"
+        style="color:rgba(255,255,255,0.5);font-size:0.75rem;text-transform:uppercase;letter-spacing:0.15em;margin-top:16px;">
+        As Nossas Marcas</div>
+      <div class="navbar-dropdown-menu">
+        <a href="/brands/tech/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#1565C0"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Tech</div>
+          </div>
+        </a>
+        <a href="/brands/cars/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#E65100"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Cars</div>
+          </div>
+        </a>
+        <a href="/brands/oclock/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#FFD700"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC O'Clock</div>
+          </div>
+        </a>
+        <a href="/brands/safety/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#FF6B35"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Safety</div>
+          </div>
+        </a>
+        <a href="/brands/prive/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#C9A84C"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Privé</div>
+          </div>
+        </a>
+        <a href="/brands/furniture/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#7B1FA2"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Furniture</div>
+          </div>
+        </a>
+        <a href="/brands/cosmetics/" class="navbar-dropdown-item">
+          <div class="navbar-dropdown-dot" style="background:#D4A017"></div>
+          <div>
+            <div class="navbar-dropdown-item-text">EEC Cosmetics</div>
+          </div>
+        </a>
+      </div>
+      <a href="/news.html" class="navbar-link" style="margin-top:16px">Notícias</a>
+      <a href="/contact.html" class="navbar-link">Contacto</a>
+    </div>
+  </nav>
+
+  <div class="navbar-overlay" id="navOverlay"></div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: HERO FULL-SCREEN                  -->
+  <!-- ============================================ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div
+        style="width:100%;height:100%;background:linear-gradient(160deg, #0a1520 0%, #1C2B3A 30%, #1565C0 70%, #1C2B3A 100%)">
+      </div>
+    </div>
+    <div class="hero-pattern"></div>
+    <div class="hero-glow hero-glow-1"></div>
+    <div class="hero-glow hero-glow-2"></div>
+
+    <!-- Floating particles -->
+    <div class="hero-particles">
+      <div class="hero-particle" style="top:15%;left:10%;animation-delay:0s;width:3px;height:3px"></div>
+      <div class="hero-particle" style="top:25%;left:80%;animation-delay:1s;width:5px;height:5px"></div>
+      <div class="hero-particle" style="top:60%;left:20%;animation-delay:2s;width:4px;height:4px"></div>
+      <div class="hero-particle" style="top:70%;left:70%;animation-delay:0.5s;width:3px;height:3px"></div>
+      <div class="hero-particle" style="top:40%;left:50%;animation-delay:1.5s;width:6px;height:6px"></div>
+      <div class="hero-particle" style="top:85%;left:40%;animation-delay:3s;width:3px;height:3px"></div>
+      <div class="hero-particle" style="top:10%;left:60%;animation-delay:2.5s;width:4px;height:4px"></div>
+      <div class="hero-particle" style="top:50%;left:90%;animation-delay:0.8s;width:3px;height:3px"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-badge">Grupo Empresarial Moçambicano</div>
+      <h1>Excelência em<br>Cada <span>Segmento</span></h1>
+      <p class="hero-description">
+        O grupo EEC Corporate reúne 7 marcas de referência nos sectores de tecnologia,
+        automóvel, luxo, segurança, mobiliário e beleza em Moçambique.
+      </p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary btn-lg">Conhecer o Grupo</a>
+        <a href="#brands" class="btn btn-outline btn-lg">Explorar as Marcas</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll">
+      <div class="hero-scroll-icon"></div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: ABOUT THE GROUP                   -->
+  <!-- ============================================ -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <div class="section-subtitle">Quem Somos</div>
+          <h2 class="section-title">Um Grupo, Múltiplas Visões</h2>
+          <p>
+            A EEC Corporate é um grupo empresarial moçambicano que opera em sete sectores distintos,
+            desde a tecnologia de ponta até à alta relojoaria, passando pelo mercado automóvel,
+            segurança industrial, moda premium, mobiliário sofisticado e beleza.
+          </p>
+          <p>
+            Com uma visão focada na excelência e no atendimento de qualidade, cada marca do grupo
+            mantém a sua identidade própria, unida por valores comuns de inovação, compromisso
+            e entrega de valor ao cliente moçambicano.
+          </p>
+          <p>
+            Desde a nossa fundação, temos trabalhado para transformar a experiência de compra em
+            Moçambique, trazendo produtos de classe mundial ao alcance dos nossos clientes.
+          </p>
+          <a href="/about.html" class="btn btn-outline-dark" style="margin-top:12px">Saber Mais</a>
+        </div>
+
+        <div class="reveal-right">
+          <div class="stats-grid" style="grid-template-columns: repeat(2, 1fr);">
+            <div class="stat-item">
+              <div class="stat-number" data-count="7" data-suffix="+">0</div>
+              <div class="stat-label">Marcas</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="10" data-suffix="+">0</div>
+              <div class="stat-label">Anos de Actividade</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="5000" data-suffix="+">0</div>
+              <div class="stat-label">Produtos</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number" data-count="50" data-suffix="K+">0</div>
+              <div class="stat-label">Clientes Satisfeitos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: BRAND HUB GRID                    -->
+  <!-- ============================================ -->
+  <section class="section section-alt" id="brands">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-subtitle">Portfolio</div>
+        <h2 class="section-title">As Nossas Marcas</h2>
+        <p class="section-description">
+          Sete marcas de excelência, cada uma líder no seu segmento, unidas pela mesma visão de qualidade e inovação.
+        </p>
+      </div>
+
+      <div class="brand-hub-grid stagger-children">
+        <!-- EEC Tech -->
+        <a href="/brands/tech/" class="brand-card" id="brand-tech">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #1565C0, #0D47A1)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#1565C0"></div>
+          <div class="brand-card-content">
+            <h3>EEC Tech</h3>
+            <p class="brand-card-tagline">Electrónicos & Tecnologia</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC Cars -->
+        <a href="/brands/cars/" class="brand-card" id="brand-cars">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #E65100, #BF360C)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#E65100"></div>
+          <div class="brand-card-content">
+            <h3>EEC Cars</h3>
+            <p class="brand-card-tagline">Automóveis Novos & Usados</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC O'Clock -->
+        <a href="/brands/oclock/" class="brand-card" id="brand-oclock">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #212121, #000)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#FFD700"></div>
+          <div class="brand-card-content">
+            <h3>EEC O'Clock</h3>
+            <p class="brand-card-tagline">Relógios de Luxo</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC Safety -->
+        <a href="/brands/safety/" class="brand-card" id="brand-safety">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #0D1B2A, #1B2838)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#FF6B35"></div>
+          <div class="brand-card-content">
+            <h3>EEC Safety & Equipment</h3>
+            <p class="brand-card-tagline">Equipamento de Protecção</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC Privé -->
+        <a href="/brands/prive/" class="brand-card" id="brand-prive">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #1A1A1A, #0a0a0a)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#C9A84C"></div>
+          <div class="brand-card-content">
+            <h3>EEC Privé</h3>
+            <p class="brand-card-tagline">Artigos de Luxo Premium</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC Furniture -->
+        <a href="/brands/furniture/" class="brand-card" id="brand-furniture">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #4A148C, #7B1FA2)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#7B1FA2"></div>
+          <div class="brand-card-content">
+            <h3>EEC Furniture</h3>
+            <p class="brand-card-tagline">Mobiliário de Escritório</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+
+        <!-- EEC Cosmetics -->
+        <a href="/brands/cosmetics/" class="brand-card" id="brand-cosmetics">
+          <div class="brand-card-bg" style="background: linear-gradient(135deg, #1A1A1A, #2d2d2d)"></div>
+          <div class="brand-card-overlay"></div>
+          <div class="brand-card-accent" style="background:#D4A017"></div>
+          <div class="brand-card-content">
+            <h3>EEC Cosmetics</h3>
+            <p class="brand-card-tagline">Perfumaria & Beleza</p>
+            <div class="brand-card-btn">
+              Visitar Loja
+              <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 4: NEWS HIGHLIGHTS                   -->
+  <!-- ============================================ -->
+  <section class="section" id="news">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-subtitle">Blog</div>
+        <h2 class="section-title">Últimas Notícias</h2>
+        <p class="section-description">
+          Fique por dentro das novidades, lançamentos e eventos do grupo EEC Corporate.
+        </p>
+      </div>
+
+      <div class="news-grid stagger-children">
+        <article class="news-card">
+          <div class="news-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#1565C0,#0D47A1)"></div>
+            <div class="news-card-date">28 Fev 2024</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-tag">EEC Tech</div>
+            <h3>Novos smartphones Samsung Galaxy S24 já disponíveis</h3>
+            <p>A EEC Tech acaba de receber o mais recente lançamento da Samsung. Descubra as novidades e as ofertas
+              especiais de lançamento na nossa loja.</p>
+            <a href="#" class="news-card-link">
+              Ler Mais
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#212121,#FFD700)"></div>
+            <div class="news-card-date">15 Fev 2024</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-tag">EEC O'Clock</div>
+            <h3>Colecção Primavera 2024: Elegância Atemporal</h3>
+            <p>Apresentamos a nova colecção de relógios que combina tradição com modernidade. Peças exclusivas para quem
+              valoriza o tempo com estilo.</p>
+            <a href="#" class="news-card-link">
+              Ler Mais
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </article>
+
+        <article class="news-card">
+          <div class="news-card-image">
+            <div style="width:100%;height:100%;background:linear-gradient(135deg,#E65100,#BF360C)"></div>
+            <div class="news-card-date">10 Fev 2024</div>
+          </div>
+          <div class="news-card-body">
+            <div class="news-card-tag">EEC Cars</div>
+            <h3>Feira do Automóvel EEC: Condições especiais em Março</h3>
+            <p>Prepare-se para as melhores ofertas do ano. Financiamento a partir de 0% de entrada e test drives
+              disponíveis durante todo o mês.</p>
+            <a href="#" class="news-card-link">
+              Ler Mais
+              <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 8h10M9 4l4 4-4 4" />
+              </svg>
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center" style="margin-top:var(--space-3xl)">
+        <a href="/news.html" class="btn btn-outline-dark">Ver Todas as Notícias</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 5: WHY EEC                           -->
+  <!-- ============================================ -->
+  <section class="section section-alt" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-subtitle">Porquê Nós</div>
+        <h2 class="section-title">Porquê Escolher o Grupo EEC</h2>
+        <p class="section-description">
+          Comprometidos com a excelência em cada detalhe, da selecção de produtos ao apoio pós-venda.
+        </p>
+      </div>
+
+      <div class="features-grid stagger-children">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+              <path d="m9 12 2 2 4-4" />
+            </svg>
+          </div>
+          <h4>Qualidade Garantida</h4>
+          <p>Todos os nossos produtos passam por rigorosos processos de controlo de qualidade antes de chegarem às suas
+            mãos.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <h4>Suporte Especializado</h4>
+          <p>Equipa de especialistas prontos para ajudar com qualquer questão, desde a escolha do produto ao apoio
+            técnico.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" rx="2" />
+              <path d="m16 8 4 2.5v3L16 16" />
+              <path d="M22 17H2" />
+              <circle cx="7" cy="17" r="2" />
+              <circle cx="17" cy="17" r="2" />
+            </svg>
+          </div>
+          <h4>Entrega Rápida</h4>
+          <p>Sistema de logística eficiente com entrega para todo o Moçambique. Rapidez e cuidado em cada encomenda.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
+              <line x1="12" y1="22.08" x2="12" y2="12" />
+            </svg>
+          </div>
+          <h4>Variedade de Marcas</h4>
+          <p>7 marcas distintas cobrindo os sectores mais importantes, tudo disponível num único ecossistema.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+            </svg>
+          </div>
+          <h4>Inovação Constante</h4>
+          <p>Sempre à frente com as últimas novidades e tendências do mercado global, trazidas directamente para si.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+          </div>
+          <h4>Compromisso com o Cliente</h4>
+          <p>A satisfação do cliente é a nossa prioridade. Garantia, devolução e apoio pós-venda de excelência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 6: PARTNERS                          -->
+  <!-- ============================================ -->
+  <section class="section" id="partners">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-subtitle">Parceiros</div>
+        <h2 class="section-title">Parceiros de Confiança</h2>
+      </div>
+
+      <div class="partners-wrapper reveal">
+        <div class="partners-track">
+          <div class="partner-item">Samsung</div>
+          <div class="partner-item">Apple</div>
+          <div class="partner-item">Toyota</div>
+          <div class="partner-item">Rolex</div>
+          <div class="partner-item">3M</div>
+          <div class="partner-item">Gucci</div>
+          <div class="partner-item">IKEA</div>
+          <div class="partner-item">Chanel</div>
+          <div class="partner-item">LG</div>
+          <div class="partner-item">Bosch</div>
+          <!-- Duplicate for seamless scroll -->
+          <div class="partner-item">Samsung</div>
+          <div class="partner-item">Apple</div>
+          <div class="partner-item">Toyota</div>
+          <div class="partner-item">Rolex</div>
+          <div class="partner-item">3M</div>
+          <div class="partner-item">Gucci</div>
+          <div class="partner-item">IKEA</div>
+          <div class="partner-item">Chanel</div>
+          <div class="partner-item">LG</div>
+          <div class="partner-item">Bosch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 7: NEWSLETTER                        -->
+  <!-- ============================================ -->
+  <section class="section newsletter" id="newsletter">
+    <div class="container">
+      <div class="newsletter-content reveal">
+        <div class="section-subtitle" style="color:rgba(33,150,243,0.9)">Newsletter</div>
+        <h2>Mantenha-se Informado</h2>
+        <p>Receba as últimas novidades, promoções exclusivas e lançamentos de todas as nossas marcas.</p>
+        <form class="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Insira o seu e-mail" required />
+          <button type="submit" class="btn btn-primary">Subscrever</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================ -->
+  <!-- FOOTER                                       -->
+  <!-- ============================================ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="/assets/logos/eec-logo.svg" alt="EEC Corporate" style="height:50px;width:auto" />
+          <p>
+            Grupo empresarial moçambicano de referência, presente em 7 sectores estratégicos.
+            Comprometidos com a excelência e a inovação no mercado nacional e lusófono.
+          </p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+              </svg>
+            </a>
+            <a href="#" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 00-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 00-1.94 2A29 29 0 001 11.75a29 29 0 00.46 5.33A2.78 2.78 0 003.4 19.1c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 001.94-2 29 29 0 00.46-5.25 29 29 0 00-.46-5.43z" />
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="white" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Marcas</h4>
+          <div class="footer-links">
+            <a href="/brands/tech/">EEC Tech</a>
+            <a href="/brands/cars/">EEC Cars</a>
+            <a href="/brands/oclock/">EEC O'Clock</a>
+            <a href="/brands/safety/">EEC Safety</a>
+            <a href="/brands/prive/">EEC Privé</a>
+            <a href="/brands/furniture/">EEC Furniture</a>
+            <a href="/brands/cosmetics/">EEC Cosmetics</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Grupo</h4>
+          <div class="footer-links">
+            <a href="/about.html">Sobre Nós</a>
+            <a href="/news.html">Notícias</a>
+            <a href="/contact.html">Contacto</a>
+            <a href="#">Carreiras</a>
+          </div>
+        </div>
+
+        <div>
+          <h4>Suporte</h4>
+          <div class="footer-links">
+            <a href="#">Centro de Ajuda</a>
+            <a href="#">Envio & Entrega</a>
+            <a href="#">Devoluções</a>
+            <a href="#">FAQ</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2024 EEC Corporate. Todos os direitos reservados.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Política de Privacidade</a>
+          <a href="#">Termos & Condições</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/258840000000" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <!-- JS -->
+  <script src="/js/main.js"></script>
+</body>
+
+</html>

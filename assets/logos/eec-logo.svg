@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <!-- Chevron / Arrow -->
+  <path d="M100 20 L145 65 L135 75 L100 42 L65 75 L55 65 Z" fill="#1C2B3A"/>
+  <!-- Circle e -->
+  <circle cx="100" cy="140" r="55" fill="none" stroke="#2196F3" stroke-width="16" stroke-dasharray="290 360" stroke-dashoffset="-25" stroke-linecap="round"/>
+  <!-- Dot on the e -->
+  <circle cx="145" cy="115" r="9" fill="#2196F3"/>
+  <!-- Moçambique text -->
+  <text x="100" y="225" text-anchor="middle" font-family="Montserrat, Arial, sans-serif" font-weight="600" font-size="22" fill="#2196F3" letter-spacing="1">Moçambique</text>
+</svg>
